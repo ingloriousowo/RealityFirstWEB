@@ -1,0 +1,44 @@
+.logo-navbar{
+    width: 50px;
+}
+
+.titulo-nosotros{
+    display: inline;
+}
+
+.imagen-nosotros{
+    width: 50px;
+    position: relative;
+    bottom: 10px;
+}
+
+.imagen-perfil{
+    display: inline;
+}
+
+.texto-perfil{
+    display: inline;
+    position: relative;
+    top: 115px;
+    left: 10px;
+}
+
+.img-placeholder{
+    width: 400px;
+    border: 1px solid black;
+}
+
+.red-social {
+    display: inline;
+    width: 200px;
+    transition: .5s;
+}
+
+.red-social:hover {
+    width: 250px;
+}
+
+.red{
+    display: inline;
+    font-size: 100px;
+}
