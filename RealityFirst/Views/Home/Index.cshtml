@@ -2,7 +2,8 @@
     ViewData["Title"] = "Home";
 }
 
-@model IList<Evento>
+@model IList<Evento> 
+
 
     <!--carrusel-->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -52,13 +53,13 @@
               @foreach(Evento evento in Model){
                    <div class="col">
                       <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="~/recursos/imagen placeholder.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">@evento.Nombre</h5>
                           <p class="card-text">@evento.Descripcion</p>
                         </div>
                         <div class="card-footer">
-                          <a href="#" class="btn btn-primary">Más Información</a>
+                          <a href="/Evento/Ficha/@evento.Id" class="btn btn-primary">Más Información</a>
                         </div>
                       </div>
                    </div>
@@ -68,9 +69,9 @@
         <div class="col-4">
           <div class="card text-bg-light" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">Noticias</h5>
+              <p class="card-text">Accede a Nuestra Seccion de Noticias! Todo sobre el ámbito del Espectáculo</p>
+              <a asp-controller="Noticia" asp-action="noticia" class="btn btn-primary">Noticias</a>
             </div>
           </div>
           <br>

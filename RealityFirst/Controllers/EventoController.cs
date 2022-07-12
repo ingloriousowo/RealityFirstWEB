@@ -33,7 +33,7 @@ namespace RealityFirst.Controllers
         {
             Evento obj = app.Get(id);
 
-            return View(obj);
+            return View("ficha",obj);
         }
 
         public IActionResult Filtrar(string id)

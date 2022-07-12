@@ -42,3 +42,9 @@
     display: inline;
     font-size: 100px;
 }
+
+.imagen-noticia{
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+}

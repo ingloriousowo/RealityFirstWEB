@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Noticias";
+}
+
+@model IList<Noticia> 
+
+<div class="container">
+    @foreach(Noticia noticia in Model)
+    {   
+        <br />
+        <div class="card mb-3">
+            <img src="~/recursos/imagen placeholder.jpg" class="card-img-top imagen-noticia img-fluid" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@noticia.titulo</h5>
+                <p class="card-text">@noticia.subtitulo</p>
+                <p class="card-text"><small class="text-muted">Escritor: @noticia.escritor</small></p>
+                <div class="card-footer">
+                    <a href="/Noticia/FichaNoticia/@noticia.Id" class="btn btn-primary">Más Información</a>
+                </div>
+            </div>
+        </div>
+        <br />
+
+    }
+</div>

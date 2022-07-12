@@ -34,7 +34,7 @@ namespace RealityFirst.Servicio
             {
                 server.Open();
                 string query = string.Format(
-                    "Select a.id, a.nombre, a.fotoURL, a.Descripcion, a.Fecha, a.Lugar, b.nombre from evento a join artista b on (a.artista = b.id);"
+                    "Select a.id, a.nombre, a.fotoURL, a.Descripcion, a.Fecha_hora, a.Lugar, b.nombre from evento a join artista b on (a.artista = b.id) where a.id = {0};",id
                     );
                 using (SqlCommand cmd = new SqlCommand(query, server))
                 {

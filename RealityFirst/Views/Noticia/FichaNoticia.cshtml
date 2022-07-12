@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Noticias";
+}
+
+@model Noticia
+
+<div class="container">
+    <br />
+    <h1>@Model.titulo</h1>
+    <br />
+    <h4><i>@Model.subtitulo</i></h4>
+    <img src="~/recursos/imagen placeholder.jpg" class="img-fluid" style="width:800px; margin: 0 auto"/>
+    <br />
+    <p>@Model.cuerpo</p>
+    <br />
+    <h6>Escritor: @Model.escritor</h6>
+    <br />
+    <a class="btn btn-primary" asp-controller="Noticia" asp-action="noticia">Volver A Noticias</a>
+</div>
