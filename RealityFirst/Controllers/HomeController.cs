@@ -1,26 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RealityFirst.Models;
+using RealityFirst.Servicio;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace RealityFirst.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        
 
-        public HomeController(ILogger<HomeController> logger)
+        IConfiguration config;
+        EventoServicio app;
+
+        public HomeController(IConfiguration config)
         {
-            _logger = logger;
+            this.config = config;
+            string ConnectionString = config.GetConnectionString("dbRealityFirst");
+            app = new EventoServicio(ConnectionString);
         }
+
 
         public IActionResult Index()
         {
-            return View();
+            IList<Evento> lista = app.GetAll();
+            return View(lista);
         }
 
         public IActionResult Contacto()
